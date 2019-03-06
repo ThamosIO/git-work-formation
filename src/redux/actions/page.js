@@ -55,7 +55,7 @@ export function filterPokemons(searchString = '') {
     const displayedPokemons = getState().page.pokemons.filter(pokemon => {
       return pokemon.name.toLowerCase().includes(searchString.toLowerCase())
     })
-
+    console.log(displayedPokemons)
     dispatch({
       type: FILTER_POKEMONS,
       payload: displayedPokemons
