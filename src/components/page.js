@@ -15,13 +15,13 @@ class Page extends Component {
   }
 
   handleSearch(event) {
-    this.props.filterPokemons(event.currentTarget.value)
     this.setState({ value: event.currentTarget.value })
+    this.props.filterPokemons(event.currentTarget.value)
   }
 
   resetSearch(event) {
-    this.props.filterPokemons()
     this.setState({ value: '' })
+    this.props.filterPokemons()
   }
 
   render() {
